@@ -370,7 +370,7 @@ click-middle = playerctl --player=spotify previous
 type = internal/tray
 
 tray-spacing = 2
-tray-padding = 2
+tray-padding = 1
 tray-size = 70%
 
 [module/volume]
