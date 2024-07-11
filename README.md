@@ -1,6 +1,9 @@
 # My Dotfiles
 > [!IMPORTANT] This is still a work-in-progress
 
+## Info
+I managed my dotfiles through a simple git --bare repository. I just followed a simple [DT's tutorial](https://youtu.be/tBoLDpTWVOM?si=TePOo3Zk-UlTqfmP) on YT
+
 ## Packages/Dependencies Used
 ### major UI elements
 - wm: [`i3`](https://i3wm.org/docs/?ref=itsfoss.com)
