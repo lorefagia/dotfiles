@@ -24,3 +24,5 @@ This is still a work-in-progress of my dotfiles
 - terminal font: [Hack](https://www.nerdfonts.com/#home) (nerd-variant)
 
 ## Preview
+
+## Star-History
