@@ -65,7 +65,7 @@ exec_always feh --bg-fill ~/Pictures/Discord/dracula/rei.jpg
 exec_always killall picom ; picom --config ~/.config/picom/picom.conf
 
 # Notification
-exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
+exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 # Conky
 exec --no-startup-id conky -c ~/.config/conky/conky.conf
