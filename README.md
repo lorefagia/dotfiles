@@ -2,13 +2,13 @@
 > [!IMPORTANT] This is still a work-in-progress
 
 ## Info
-I manage my dotfiles through a simple git --bare repository. I just followed a simple [DT's tutorial](https://youtu.be/tBoLDpTWVOM?si=TePOo3Zk-UlTqfmP) on YT
+I manage my dotfiles through a simple git --bare repository. I just followed this [DT's tutorial](https://youtu.be/tBoLDpTWVOM?si=TePOo3Zk-UlTqfmP) on YT
 
 ## Packages/Dependencies Used
 ### major UI elements
 - wm: [`i3`](https://i3wm.org/docs/?ref=itsfoss.com)
 - bar: [`polybar`](https://github.com/polybar/polybar)
-- lockscreen: [``]()
+- lockscreen: [`i3lock-color`](https://github.com/Raymo111/i3lock-color?ref=itsfoss.com)
 - notification daemon: [`dunst`](https://github.com/dunst-project/dunst)
 - app launcher: [`rofi`](https://github.com/davatorium/rofi)
 
