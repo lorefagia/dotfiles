@@ -11,6 +11,7 @@ I manage my dotfiles through a simple git --bare repository. I just followed thi
 - lockscreen: [`i3lock-color`](https://github.com/Raymo111/i3lock-color?ref=itsfoss.com)
 - notification daemon: [`dunst`](https://github.com/dunst-project/dunst)
 - app launcher: [`rofi`](https://github.com/davatorium/rofi)
+- music: spotify + [`spicetify`](https://spicetify.app/)
 
 ### terminal stuff
 - terminal: [`tilix`](https://gnunn1.github.io/tilix-web/)
@@ -20,7 +21,8 @@ I manage my dotfiles through a simple git --bare repository. I just followed thi
 
 ### theming stuff
 - theme: [dracula](https://draculatheme.com/).
-- wallpaper: 
+- wallpaper: random from [wallhaven](https://wallhaven.cc/) - check my themes folder
+- spicetify theme: [dracula](https://draculatheme.com/spicetify)
 - firefox theming: 
 - theme for YouTube: [Enhancer for YouTube](https://www.mrfdev.com/enhancer-for-youtube).
 - fonts: [Ubuntu](https://design.ubuntu.com/font) (monospace, nerd variant), [JetBrains Mono](https://www.nerdfonts.com/#home) (nerd variant)
