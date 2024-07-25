@@ -11,6 +11,7 @@ I manage my dotfiles through a simple git --bare repository. I just followed thi
 - lockscreen: [`i3lock-color`](https://github.com/Raymo111/i3lock-color?ref=itsfoss.com)
 - notification daemon: [`dunst`](https://github.com/dunst-project/dunst)
 - app launcher: [`rofi`](https://github.com/davatorium/rofi)
+- pdf reader: [`zathura`](https://wiki.archlinux.org/title/Zathura)
 - music: spotify + [`spicetify`](https://spicetify.app/)
 
 ### terminal stuff
