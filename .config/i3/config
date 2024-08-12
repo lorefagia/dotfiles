@@ -15,7 +15,7 @@ set $mod Mod4
 ##################################################################################################################
 #       Fonts
 ##################################################################################################################
-font pango:JetBrainsMono Nerd Font 10
+font pango:JetBrainsMono Nerd Font 9
 
 ##################################################################################################################
 #       Settings
@@ -28,11 +28,11 @@ title_align left
 for_window [urgent=latest] focus
 
 # Borders
-for_window [class="^.*"] border pixel 0
-for_window [title="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 6
+for_window [title="^.*"] border pixel 6
 
 # default_border pixel 3
-# hide_edge_borders both
+# hide_edge_borders smart
 # border_radius 3
 # smart_borders on
 # smart_gaps on
@@ -58,7 +58,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Display wallpaper
-exec_always feh --bg-fill ~/Pictures/Discord/dracula/rei.jpg
+exec_always feh --bg-fill ~/Pictures/Discord/dracula/mobpsycho.png
 
 # Transparency
 # exec_always picom --corner-radius 10 -f -D 5
@@ -83,6 +83,9 @@ exec xset s off
 
 # Monitor
 exec_always ~/.screenlayout/screen_config.sh
+
+# Terminal
+exec tilix
 
 ##################################################################################################################
 #       AUdio & Brightness
@@ -181,7 +184,10 @@ bindsym $mod+p focus parent
 #bindsym $mod+c focus child
 
 # focus on monitor
-bindsym $mod+Shift+m focus output HDMI-1
+bindsym $mod+m focus output HDMI-1
+
+#add keybinding for moving workspace to monitor
+
 
 ##################################################################################################################
 #       Workspaces Configuration
@@ -221,6 +227,8 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+# move focused container to monitor
+
 ##################################################################################################################
 #       Automatically Assigning Workspaces & Special Actions
 ##################################################################################################################
@@ -230,8 +238,8 @@ for_window [class="Tilix"] focus
 assign [class="Emacs"] $ws1
 for_window [class="Emacs"] focus
 
-assign [class="MATLAB R2023b - academic use"] $ws5
-for_window [class="MATLAB R2023b - academic use"] focus
+assign [class="MATLAB R2024a - academic use"] $ws5
+for_window [class="MATLAB R2024a - academic use"] focus
 
 assign [class="RStudio"] $ws5
 for_window [class="RStudio"] focus
@@ -244,6 +252,9 @@ for_window [class="discord"] focus
 
 assign [class="teams-for-linux"] $ws7
 for_window [class="teams-for-linux"] focus
+
+assign [class="TeamViewer"] $ws7
+for_window [class="TeamViewer"] focus
 
 assign [class="thunderbird"] $ws4
 for_window [class="thunderbird"] focus
@@ -259,6 +270,9 @@ for_window [class="Spotify"] focus
 assign [class="KeePassXC"] $ws10
 for_window [class="KeePassXC"] focus
 
+assign [class="Zathura"] $ws8
+for_window [class="Zathura"] focus
+
 ##################################################################################################################
 #       Floating Rules
 ##################################################################################################################
@@ -268,6 +282,9 @@ for_window [floating] resize set 875 645, move position center
 # set floating for
 for_window [class="TelegramDesktop"] floating enable
 for_window [class="GitHub Desktop"] floating enable
+#for_window [class="matplotlib"] floating enable
+#for_window [class="Matplotlib"] floating enable
+for_window [class="TeamViewer"] floating enable
 
 ##################################################################################################################
 #       Miscellaneous
