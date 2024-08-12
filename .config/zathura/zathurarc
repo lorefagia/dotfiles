@@ -50,7 +50,9 @@ set recolor-darkcolor           rgba(248,248,242,1)   # Foreground
 # Startup options
 #
 
+set adjust-open "best-fit"
 set selection-clipboard clipboard
+set guioptions v
 set scroll-full-overlap 0.2
 set scroll-page-aware true
 set window-title-basename true
@@ -60,7 +62,7 @@ set vertical-center true
 set synctex true
 set recolor true
 
-set font "Ubuntu Monospace bold 14"
+set font "Ubuntu Monospace bold 12"
 set zoom-step 3
 
 #
