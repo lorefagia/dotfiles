@@ -10,14 +10,14 @@
 [global]
     ### Display ###
     monitor = 0
-    follow = none
+    follow = mouse
 
     ### Geometry ###
     width = (0, 300)
     height = 300
     origin = top-right
     scale = 0
-    offset = 15x20
+    offset = 11x30
     notification_limit = 5
 
     ### Progress bar ###
@@ -51,7 +51,7 @@
     sort = yes
 
     ### Text ###
-    font = Ubuntu Nerd Font 10
+    font = Ubuntu Nerd Font 9
     line_height = 1
     
     markup = full
@@ -119,7 +119,7 @@
     # * context_all: Open context menu for all notifications.
     # These values can be strung together for each mouse event, and
     # will be executed in sequence.
-    mouse_left_click = context, close_current
+    mouse_left_click = close_current, context
     mouse_middle_click = do_action, open_url, close_current
     mouse_right_click = close_all
     
@@ -128,14 +128,14 @@
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#12121f"
     foreground = "#d4d7ff"
-    timeout = 10
+    timeout = 4
     # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_normal]
     background = "#12121f"
     foreground = "#d4d7ff"
-    timeout = 10
+    timeout = 8
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon
 
