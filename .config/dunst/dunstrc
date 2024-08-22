@@ -26,9 +26,9 @@
     progress_bar_frame_width = 0
     progress_bar_min_width = 125
     progress_bar_max_width = 250
-    progress_bar_corner_radius = 4
+    progress_bar_corner_radius = 1
 
-    icon_corner_radius = 5
+    icon_corner_radius = 1
 
     indicate_hidden = yes
 
@@ -100,7 +100,7 @@
     # Define the class of the windows spawned by dunst
     class = Dunst
 
-    corner_radius = 8
+    corner_radius = 2
 
     ignore_dbusclose = false
 
