@@ -58,7 +58,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Display wallpaper
-exec_always feh --bg-fill ~/Pictures/Discord/dracula/mobpsycho.png
+exec_always feh --bg-fill ~/Pictures/Discord/dracula/rei.jpg
 
 # Transparency
 # exec_always picom --corner-radius 10 -f -D 5
@@ -133,10 +133,8 @@ bindsym Mod1+q kill
 bindsym Mod1+F4 kill
 
 #  Rofi Program Launcher
-bindsym $mod+d exec --no-startup-id rofi -show drun 
-# bindsym Mod1+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort -automatic-save-to-history > /dev/null"
-# bindsym Mod1+d exec --no-startup-id rofi -show filebrowser
-# bindsym Mod1+p exec --no-startup-id rofi -show power-menu -modi "power-menu:rofi-power-menu --choices=lockscreen/shutdown/reboot"
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/bin/launcher
+bindsym $mod+q exec --no-startup-id ~/.config/rofi/bin/powermenu
 
 # change focus
 bindsym $mod+j focus left
@@ -253,8 +251,8 @@ for_window [class="discord"] focus
 assign [class="teams-for-linux"] $ws7
 for_window [class="teams-for-linux"] focus
 
-assign [class="TeamViewer"] $ws7
-for_window [class="TeamViewer"] focus
+assign [class="Anydesk"] $ws7
+for_window [class="Anydesk"] focus
 
 assign [class="thunderbird"] $ws4
 for_window [class="thunderbird"] focus
@@ -284,7 +282,7 @@ for_window [class="TelegramDesktop"] floating enable
 for_window [class="GitHub Desktop"] floating enable
 #for_window [class="matplotlib"] floating enable
 #for_window [class="Matplotlib"] floating enable
-for_window [class="TeamViewer"] floating enable
+for_window [class="Anydesk"] floating enable
 
 ##################################################################################################################
 #       Miscellaneous
