@@ -24,7 +24,6 @@ I manage my dotfiles through a simple git --bare repository. I just followed thi
 - theme: [Dracula](https://draculatheme.com/).
 - wallpaper: random from [Wallhaven](https://wallhaven.cc/) - check my wallpapers repo [here]()
 - spicetify theme: [Dracula](https://draculatheme.com/spicetify)
-- firefox theming: [!TODO]
 - theme for YouTube: [Enhancer for YouTube](https://www.mrfdev.com/enhancer-for-youtube).
 - fonts: [Ubuntu](https://design.ubuntu.com/font) (monospace, nerd variant), [JetBrains Mono](https://www.nerdfonts.com/#home) (nerd variant)
 - terminal font: [Hack](https://www.nerdfonts.com/#home) (nerd-variant)
