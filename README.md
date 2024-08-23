@@ -1,8 +1,8 @@
 # My Dotfiles
-> [!IMPORTANT] This is still a work-in-progress
+> [!IMPORTANT] This is still a work-in-progress.
 
 ## Info
-I manage my dotfiles through a simple git --bare repository. I just followed this [DT's tutorial](https://youtu.be/tBoLDpTWVOM?si=TePOo3Zk-UlTqfmP) on YT
+I manage my dotfiles through a simple git --bare repository. I just followed this [DT's tutorial](https://youtu.be/tBoLDpTWVOM?si=TePOo3Zk-UlTqfmP) on YT.
 
 ## Packages/Dependencies Used
 ### major UI elements
@@ -21,10 +21,10 @@ I manage my dotfiles through a simple git --bare repository. I just followed thi
 - fetch: [`fastfetch`](https://github.com/fastfetch-cli/fastfetch)
 
 ### theming stuff
-- theme: [dracula](https://draculatheme.com/).
-- wallpaper: random from [wallhaven](https://wallhaven.cc/) - check my walls folder
-- spicetify theme: [dracula](https://draculatheme.com/spicetify)
-- firefox theming: 
+- theme: [Dracula](https://draculatheme.com/).
+- wallpaper: random from [Wallhaven](https://wallhaven.cc/) - check my wallpapers repo [here]()
+- spicetify theme: [Dracula](https://draculatheme.com/spicetify)
+- firefox theming: [!TODO]
 - theme for YouTube: [Enhancer for YouTube](https://www.mrfdev.com/enhancer-for-youtube).
 - fonts: [Ubuntu](https://design.ubuntu.com/font) (monospace, nerd variant), [JetBrains Mono](https://www.nerdfonts.com/#home) (nerd variant)
 - terminal font: [Hack](https://www.nerdfonts.com/#home) (nerd-variant)
