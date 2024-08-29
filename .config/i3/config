@@ -184,9 +184,6 @@ bindsym $mod+p focus parent
 # focus on monitor
 bindsym $mod+m focus output HDMI-1
 
-#add keybinding for moving workspace to monitor
-
-
 ##################################################################################################################
 #       Workspaces Configuration
 ##################################################################################################################
@@ -271,6 +268,9 @@ for_window [class="KeePassXC"] focus
 assign [class="Zathura"] $ws8
 for_window [class="Zathura"] focus
 
+assign [class="komikku"] $ws8
+for_window [class="komikku"] focus
+
 ##################################################################################################################
 #       Floating Rules
 ##################################################################################################################
@@ -280,9 +280,6 @@ for_window [floating] resize set 875 645, move position center
 # set floating for
 for_window [class="TelegramDesktop"] floating enable
 for_window [class="GitHub Desktop"] floating enable
-#for_window [class="matplotlib"] floating enable
-#for_window [class="Matplotlib"] floating enable
-for_window [class="Anydesk"] floating enable
 
 ##################################################################################################################
 #       Miscellaneous
