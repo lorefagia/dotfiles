@@ -2,8 +2,8 @@
 @import "font.rasi"
 
 * {
-    background-color:	@background-color;
-    text-color:         @foreground;
+    background-color:	@active-background;
+    text-color:         @urgent-foreground;
 }
 
 window {
@@ -20,5 +20,5 @@ window {
 entry {
     expand: 		true;
     width: 		200px;
-    text-color:		@bordercolor;
+    text-color:		@foreground;
 }

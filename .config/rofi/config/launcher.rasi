@@ -11,123 +11,123 @@ configuration {
 @import "colors.rasi"
 
 window {
-    transparency:	"real";	
-    background-color: 	@background-color;
-    text-color: 	@foreground;
-    width:          	30%;
-    height: 		50%;
+    transparency:		"real";	
+    background-color: 		@background-color;
+    text-color: 		@foreground;
+    width:          		30%;
+    height: 			50%;
 }
 
 textbox-prompt-colon {
-    expand:		false;
-    str: 		"";
-    border-radius:      100%;
-    background-color:   @selected-background;
-    text-color:         @foregorund;
-    padding:            8px 12px 8px 12px;
-    font:		"JetBrainsMono Nerd Font 20";
+    expand:			false;
+    str: 			"";
+    border-radius:      	100%;
+    background-color:   	@selected-background;
+    text-color:         	@foregorund;
+    padding:            	8px 18px 8px 10px;
+    font:			"JetBrainsMono Nerd Font 20";
 }
 
 entry {
-    background-color:	@background-color;
-    text-color:         @foreground;
-    placeholder-color:  @background-color;
-    expand:             true;
-    placeholder:        "Search...";
-    blink:              true;
-    font:		"JetBrainsMono Nerd Font 20";
-    padding:            10px;
+    background-color:		@background-color;
+    text-color:         	@foreground;
+    placeholder-color:  	@background-color;
+    expand:             	true;
+    placeholder:        	"Search...";
+    blink:			true;
+    font:			"JetBrainsMono Nerd Font 20";
+    padding:            	10px;
 }
 
 inputbar {
-    children:		[ textbox-prompt-colon, entry ];
-    background-color:   @background-color;
-    text-color:         @foreground;
-    expand:             false;
-    border:             2px 2px 2px 2px;
-    border-radius:      8px;
-    border-color:       @bordercolor;
-    margin:             0px 0px 0px 0px;
-    position:           center;
+    children:			[ textbox-prompt-colon, entry ];
+    background-color:   	@background-color;
+    text-color:			@foreground;
+    expand:			false;
+    border:             	2px 2px 2px 2px;
+    border-radius:      	8px;
+    border-color:       	@bordercolor;
+    margin:             	0px 0px 0px 0px;
+    position:           	center;
 }
 
 case-indicator {
-    background-color:   @background-color;
-    text-color:         @foreground;
-    spacing:            0;
+    background-color:		@background-color;
+    text-color:         	@foreground;
+    spacing:            	0;
 }
 
 listview {
-    background-color:   @background-color;
-    lines:		8;
-    spacing:            12px;
-    cycle:              true;
-    dynamic:            true;
-    layout:             vertical;
+    background-color:		@background-color;
+    lines:			8;
+    spacing:            	12px;
+    cycle:              	true;
+    dynamic:            	true;
+    layout:			vertical;
 }
 
 mainbox {
-    background-color:	@background-color;
-    children:		[ inputbar, listview ];
-    spacing: 		18px;
-    padding: 		18px;
+    background-color:		@background-color;
+    children:			[ inputbar, listview ];
+    spacing: 			18px;
+    padding: 			18px;
 }
 
 element {
-    background-color:	@background-color;
-    border-color:	@bordercolor;
-    border:  		2px;
-    text-color: 	@foreground;
-    orientation: 	horizontal;
-    border-radius: 	8px;
-    padding: 		10px 10px 10px 10px;
+    background-color:		@background-color;
+    border-color:		@bordercolor;
+    border:  			2px;
+    text-color: 		@foreground;
+    orientation: 		horizontal;
+    border-radius: 		8px;
+    padding: 			10px 10px 10px 10px;
 }
 
 element-icon {
-    background-color:	inherit;
-    text-color: 	inherit;
-    horizontal-align:	0.5;
-    vertical-align:	0.5;
-    size:		32px;
-    border:		0px;
+    background-color:		inherit;
+    text-color: 		inherit;
+    horizontal-align:		0.5;
+    vertical-align:		0.5;
+    size:			32px;
+    border:			0px;
 }
 
 element-text {
-    background-color: 	inherit;
-    text-color:       	inherit;
-    expand:             true;
-    horizontal-align:   0;
-    vertical-align:     0.5;
-    margin:             2px 0px 2px 2px;
+    background-color:		inherit;
+    text-color:       		inherit;
+    expand:             	true;
+    horizontal-align:   	0;
+    vertical-align:     	0.5;
+    margin:             	2px 0px 2px 2px;
 }
 
 element normal.urgent,
 element alternate.urgent {
-    background-color:   @urgent-background;
-    text-color:         @foreground;
-    border-radius:      9px;
+    background-color:		@urgent-background;
+    text-color:			@foreground;
+    border-radius:     		9px;
 }
 
 element normal.active,
 element alternate.active {
-    background-color:   @background-color;
-    text-color:         @foreground;
+    background-color:		@background-color;
+    text-color:         	@foreground;
 }
 
 element selected {
-    background-color:   @selected-active-background;
-    text-color:         @foreground;
-    border:             0px 0px 0px 0px;
-    border-radius:      10px;
-    border-color:       @bordercolor;
+    background-color:		@selected-active-background;
+    text-color:         	@foreground;
+    border:             	0px 0px 0px 0px;
+    border-radius:      	10px;
+    border-color:       	@bordercolor;
 }
 
 element selected.urgent {
-    background-color:   @selected-urgent-background;
-    text-color:         @foreground;
+    background-color:		@selected-urgent-background;
+    text-color:         	@foreground;
 }
 
 element selected.active {
-    background-color:   @background-color;
-    color:              @foreground;
+    background-color:		@background-color;
+    color:              	@foreground;
 }

@@ -8,19 +8,38 @@ if [[ "$DIR" == "powermenus" ]]; then
 	shutdown=""
 	reboot=""
 	lock=""
+	suspend=""
+	logout=""
 	ddir="$HOME/.config/rofi/config"
 else
 
 	# Buttons
 	layout=`cat $HOME/.config/rofi/config/powermenu.rasi | grep BUTTON | cut -d'=' -f2 | tr -d '[:blank:],*/'`
 	if [[ "$layout" == "TRUE" ]]; then
+  # Section 1
+
 		shutdown="   Shutdown"
 		reboot="   Restart"
 		lock="󰌾 Lock"
+		logout="󰗽  Logout"
+  # Section 2
+#		shutdown="襤"
+#		reboot="ﰇ"
+#		lock=""
+#		logout=" "
+
+
 	else
+  # Section 1
 		shutdown=" Shutdown"
 		reboot=" Restart"
 		lock=" Lock"
+		logout=" Logout"
+  # Section 2
+#		shutdown="襤Shutdown"
+#		reboot="ﰇ Restart"
+#		lock=" Lock"
+#		logout=" Logout"
 	fi
 	ddir="$HOME/.config/rofi/config"
 fi
@@ -40,7 +59,7 @@ show_msg() {
 }
 
 # Variable passed to rofi
-options="$shutdown\n$reboot\n$lock"
+options="$shutdown\n$reboot\n$logout\n$lock"
 
 chosen="$(echo -e "$options" | $rofi_command -p "UP - $uptime" -dmenu -selected-row 0)"
 case $chosen in
@@ -57,7 +76,7 @@ case $chosen in
     $reboot)
 		ans=$(rdialog &)
 		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-			reboot
+			restart
 		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
 			exit
         else
@@ -66,6 +85,16 @@ case $chosen in
         ;;
     $lock)
         sh ~/.config/scripts/lock
+        ;;
+    $logout)
+		ans=$(rdialog &)
+		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
+			i3-msg exit
+		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
+			exit
+        else
+			show_msg
+        fi
         ;;
 esac
 
