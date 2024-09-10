@@ -68,15 +68,15 @@ exec_always killall picom ; picom --config ~/.config/picom/picom.conf
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 # Conky
-exec --no-startup-id conky -c ~/.config/conky/conky.conf
+# exec --no-startup-id conky -c ~/.config/conky/conky.conf
 
 # Disable capslock
 # exec setxkbmap -option ctrl:nocaps
 
 # Daemons
-# exec systemctl --user enable pulseaudio
-# exec systemctl --user start pulseaudio
-# exec --no-startup-id nm-applet
+exec systemctl --user enable pulseaudio
+exec systemctl --user start pulseaudio
+exec --no-startup-id nm-applet
 exec xset dpms 0 0 0
 exec xset -dpms
 exec xset s off
@@ -179,7 +179,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+p focus parent
 
 # focus the child container
-#bindsym $mod+c focus child
+# bindsym $mod+c focus child
 
 # focus on monitor
 bindsym $mod+m focus output HDMI-1
@@ -223,6 +223,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # move focused container to monitor
+# 
 
 ##################################################################################################################
 #       Automatically Assigning Workspaces & Special Actions
@@ -270,6 +271,9 @@ for_window [class="Zathura"] focus
 
 assign [class="komikku"] $ws8
 for_window [class="komikku"] focus
+
+assign [class="Lightdm-gtk-greeter-settings"] $ws10
+for_window [class="Lightdm-gtk-greeter-settings"] focus
 
 ##################################################################################################################
 #       Floating Rules
