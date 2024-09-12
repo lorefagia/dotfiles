@@ -28,35 +28,74 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
 
+# start emacs daemon
+sem_start(){
+    local sem_echo=$(emacsclient -a false -e 't' 2>/dev/null)
+    if [[ $sem_echo != "t" ]]; then
+		# start emacs daemon
+		$(emacs-lucid --daemon)
+		local sem_initialized=1
+    fi
+    if [ -z $sem_initialized ]; then
+		if [[ $# -eq 0 ]] ; then
+			echo "serving"
+		fi
+	fi
+}
+
+# start emacs daemon and open filename if argument is provided
+sem(){
+	if [[ $# -eq 0 ]] ; then
+		sem_start
+	else
+		sem_start "silence"
+		emacsclient -c $1 & disown
+	fi
+}
+
+# start emacs daemon and open filename in the terminal window if argument is provided
+semt(){
+	if [[ $# -eq 0 ]] ; then
+		sem_start
+	else
+		sem_start "silence"
+		emacsclient -nw $1
+	fi
+}
+
+# kill emacs daemon
+kem(){
+	emacsclient -e "(kill-emacs)"
+}
+
 # Aliases
 # Launch commands
-alias matlab="/usr/local/MATLAB/R2024a/bin/matlab"
-alias config="/usr/bin/git --git-dir=$HOME/Documents/GitHub/dotfiles --work-tree=$HOME"
+alias matlab="cd ~/Documents/MATLAB/ && /usr/local/MATLAB/R2024a/bin/matlab"
+alias dots="/usr/bin/git --git-dir=$HOME/Documents/GitHub/dotfiles --work-tree=$HOME"
+alias emacsconf="/usr/bin/git --git-dir=$HOME/Documents/GitHub/emacs-dots --work-tree=$HOME/.config/emacs/"
 
 # Modified commands
 alias mount="mount | column -t"
-alias htop="top"
 
 # New commands
 alias ..="cd .."
+
 ## History commands
 alias h="history"
 alias h1="history 10"
 alias h2="history 20"
 alias h3="history 30"
 alias hgrep='history | grep'
+
 ## Ping commands
 alias pg="ping google.com -c 5"
 alias pt="ping facebook.com -c 5"
 alias ping="ping -c 5"
 
-alias vi=vim
-alias svi="sudo vim"
-alias svim="sudo vim"
-alias update="sudo dnf -y update && sudo dnf -y upgrade --refresh"
+alias update="sudo dnf update && sudo dnf upgrade --refresh"
 alias fupdate="flatpak update"
 alias autoremove="sudo dnf autoremove"
-alias i3="emacs ~/.config/i3/config"
+alias i3="sem ~/.config/i3/config"
 
 # Privileged acces
 if (( UID != 0 )); then
@@ -89,3 +128,7 @@ alias ln="ln -i"
 alias chown="chown --preserve-root"
 alias chmod="chmod --preserve-root"
 alias chgrp="chgrp --preserve-root"
+
+export PATH=$PATH:/home/lorenzo/.spicetify
+
+eval "$(direnv hook bash)"
