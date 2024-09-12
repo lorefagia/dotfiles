@@ -15,9 +15,9 @@
     ### Geometry ###
     width = (0, 300)
     height = 300
-    origin = top-right
+    origin = top-center
     scale = 0
-    offset = 11x30
+    offset = 0x30
     notification_limit = 5
 
     ### Progress bar ###
@@ -40,8 +40,8 @@
     
     text_icon_padding = 10
 
-    frame_width = 3
-    frame_color = "#bd93f9"
+    frame_width = 6
+    frame_color = "#6272a4"
 
     gap_size = 5
 
@@ -124,23 +124,19 @@
     mouse_right_click = close_all
     
 [urgency_low]
-    # IMPORTANT: colors have to be defined in quotation marks.
-    # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#12121f"
-    foreground = "#d4d7ff"
+    background = "#282a36"
+    foreground = "#f8f8f2"
     timeout = 4
-    # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    background = "#12121f"
-    foreground = "#d4d7ff"
-    timeout = 8
-    # Icon for notifications with normal urgency, uncomment to enable
+    background = "#282a36"
+    foreground = "#f8f8f2"
+    timeout = 7
     #default_icon = /path/to/icon
 
 [urgency_critical]
     background = "#12121f"
     foreground = "#d95177"
-    frame_color = "#d95177"
+    frame_color = "#ff5555"
     timeout = 0
