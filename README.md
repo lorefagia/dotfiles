@@ -22,7 +22,7 @@ I manage my dotfiles through a simple git --bare repository. I just followed thi
 
 ### theming stuff
 - theme: [Dracula](https://draculatheme.com/).
-- wallpaper: random from [Wallhaven](https://wallhaven.cc/) - check my wallpapers repo [here]()
+- wallpaper: random from [Wallhaven](https://wallhaven.cc/) - check my wallpapers folder
 - spicetify theme: [Dracula](https://draculatheme.com/spicetify)
 - theme for YouTube: [Enhancer for YouTube](https://www.mrfdev.com/enhancer-for-youtube).
 - fonts: [Ubuntu](https://design.ubuntu.com/font) (monospace, nerd variant), [JetBrains Mono](https://www.nerdfonts.com/#home) (nerd variant)
