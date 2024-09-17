@@ -58,7 +58,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Display wallpaper
-exec_always feh --bg-fill ~/Pictures/Discord/dracula/rei.jpg
+exec_always feh --bg-fill ~/Pictures/Discord/dracula/sasuke.png
 
 # Transparency
 # exec_always picom --corner-radius 10 -f -D 5
@@ -255,6 +255,7 @@ for_window [class="Anydesk"] focus
 assign [class="thunderbird"] $ws4
 for_window [class="thunderbird"] focus
 
+assign [class="TelegramDesktop"] $ws4
 for_window [class="TelegramDesktop"] focus
 
 assign [class="Thunar"] $ws3
@@ -271,6 +272,8 @@ for_window [class="Zathura"] focus
 
 assign [class="komikku"] $ws8
 for_window [class="komikku"] focus
+
+for_window [class="feh"] fullscreen toggle
 
 assign [class="Lightdm-gtk-greeter-settings"] $ws10
 for_window [class="Lightdm-gtk-greeter-settings"] focus
