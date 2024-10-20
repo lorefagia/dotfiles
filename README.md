@@ -4,6 +4,13 @@
 ## Info
 I manage my dotfiles through a simple git --bare repository. I just followed this [DT's tutorial](https://youtu.be/tBoLDpTWVOM?si=TePOo3Zk-UlTqfmP) on YT.
 
+## System-Specific Details
+ - os: Fedora Linux 40 x86_64
+ - krnl: 6.11.3-200.fc40.x86_64
+ - pkgs: 2389 (rpm), 21 (flatpak)
+ - cpu: 12th Gen Intel(R) Core(TM) i7-1255U (12) @ 4.70 GHz
+ - gpu: Intel UHD Graphics @ 1.25 GHz
+
 ## Packages/Dependencies Used
 ### major UI elements
 - wm: [`i3`](https://i3wm.org/docs/?ref=itsfoss.com)
@@ -28,6 +35,9 @@ I manage my dotfiles through a simple git --bare repository. I just followed thi
 - fonts: [Ubuntu](https://design.ubuntu.com/font) (monospace, nerd variant), [JetBrains Mono](https://www.nerdfonts.com/#home) (nerd variant)
 - terminal font: [Hack](https://www.nerdfonts.com/#home) (nerd-variant)
 
-## Preview
-
-## Star-History
+## TODOs
+ - Add Preview section
+ - Add dunst notifications
+ - Add conky config
+ - Make i3wm/README.md Well Documented.
+ - Add Star-History section
