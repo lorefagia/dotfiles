@@ -70,7 +70,7 @@ kem(){
 
 # Aliases
 # Launch commands
-alias matlab="cd ~/Documents/MATLAB/ && /usr/local/MATLAB/R2024a/bin/matlab"
+alias matlab="cd ~/Documents/MATLAB/Tesi && /usr/local/MATLAB/R2024a/bin/matlab -softwareopengl"
 alias dots="/usr/bin/git --git-dir=$HOME/Documents/GitHub/dotfiles --work-tree=$HOME"
 alias emacsconf="/usr/bin/git --git-dir=$HOME/Documents/GitHub/emacs-dots --work-tree=$HOME/.config/emacs/"
 
@@ -86,6 +86,10 @@ alias h1="history 10"
 alias h2="history 20"
 alias h3="history 30"
 alias hgrep='history | grep'
+
+## TLP commands
+alias tlpb="sudo tlp-stat -b"
+alias tlpp="sudo tlp-stat -p"
 
 ## Ping commands
 alias pg="ping google.com -c 5"
@@ -132,3 +136,7 @@ alias chgrp="chgrp --preserve-root"
 export PATH=$PATH:/home/lorenzo/.spicetify
 
 eval "$(direnv hook bash)"
+
+PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH; export PATH 
+MANPATH=/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH; export MANPATH 
+INFOPATH=/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH; export INFOPATH
