@@ -94,7 +94,7 @@ function y() {
 }
 
 ############################
-# Nano configuration files #
+# Emacs configuration files #
 ############################
 alias sbash="$EDITOR ~/.bashrc"
 alias si3="$EDITOR ~/.config/i3/config"
@@ -129,6 +129,7 @@ alias spsii='sudo pacman -Sii'
 alias pacman='sudo pacman --color auto'
 alias update='sudo pacman -Syyu'
 alias upd='sudo pacman -Syyu'
+alias fupdate='flatpak update'
 
 # paru as aur helper - updates everything
 alias pksyua="paru -Syu --noconfirm"
@@ -217,6 +218,10 @@ alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/p
 alias mirrors="sudo reflector --latest 30 --number 10 --sort score --save /etc/pacman.d/mirrorlist"
 alias mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pacman.d/mirrorlist"
 
+# Gita --bare repositories
+alias idots='/usr/bin/git --git-dir=/home/lori/Documents/Github/dotfiles --work-tree=/home/lori'
+alias edots='/usr/bin/git --git-dir=/home/lori/Documents/Github/emacs-dots --work-tree=/home/lori/.emacs.d/'
+
 #########
 # Emacs #
 #########
@@ -266,5 +271,3 @@ export PATH=$PATH:/home/lori/.spicetify
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-alias idots='/usr/bin/git --git-dir=/home/lori/Documents/Github/dotfiles --work-tree=/home/lori'
-alias edots='/usr/bin/git --git-dir=/home/lori/Documents/Github/emacs-dots --work-tree=/home/lori/.emacs.d/'
