@@ -35,7 +35,6 @@ for_window [urgent=latest] focus
 
 # set border for new windows
 for_window [class="^.*"] border pixel 6
-for_window [title="^.*"] border pixel 6
 
 # set popup during fullscreen
 popup_during_fullscreen smart
@@ -363,24 +362,24 @@ for_window [floating] resize set 640 480, move position center
 # Define colors variables:
 # [Monokai Pro Machine]
 
-set $color0   	#273136
-set $color1	#FF6D7E
-set $color2	#A2E57B
-set $color3	#FFED72
-set $color4  	#FFB270
-set $color5	#BAA0F8
-set $color6	#7CD5F1
-set $color7	#F2FFFC
+set $color0     #273136
+set $color1     #FF6D7E
+set $color2	    #A2E57B
+set $color3     #FFED72
+set $color4     #FFB270
+set $color5     #BAA0F8
+set $color6     #7CD5F1
+set $color7     #F2FFFC
 set $color8     #ADB1B4
 set $background #273136
 set $foreground #F2FFFC
 set $cursor     #F2FFFC
 
 # class			border      background  text	    indicator   child_border
-client.focused        	$color0     $color0     $color7     $color3     $color0
+client.focused        	$color0     $color0     $color7     $color0     $color0
 client.unfocused      	$color0     $color0     $color8     $color0     $color0
 client.focused_inactive $color0     $color0     $color8     $color0     $color0
-client.urgent         	$color1     $color1     $color7     $color3     $color1
+client.urgent         	$color1     $color1     $color7     $color3     $color0
 
 #####################################
 # Application menu handled by rofi: #
