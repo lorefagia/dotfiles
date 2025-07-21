@@ -11,6 +11,12 @@ export VISUAL='nano'
 export HISTCONTROL=ignoreboth:erasedups
 export PAGER='most'
 
+export PATH=$PATH:/home/lori/.spicetify
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 PS1='[\u@\h \W]\$ '
 
 # If not running interactively, don't do anything
@@ -218,9 +224,9 @@ alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/p
 alias mirrors="sudo reflector --latest 30 --number 10 --sort score --save /etc/pacman.d/mirrorlist"
 alias mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pacman.d/mirrorlist"
 
-# Gita --bare repositories
+# Git --bare repositories
 alias idots='/usr/bin/git --git-dir=/home/lori/Documents/Github/dotfiles --work-tree=/home/lori'
-alias edots='/usr/bin/git --git-dir=/home/lori/Documents/Github/emacs-dots --work-tree=/home/lori/.emacs.d/'
+alias edots='/usr/bin/git --git-dir=/home/lori/Documents/Github/emacs-dots --work-tree=/home/lori/.config/emacs/'
 
 #########
 # Emacs #
@@ -265,9 +271,4 @@ semt(){
 kem(){
 	emacsclient -e "(kill-emacs)"
 }
-
-export PATH=$PATH:/home/lori/.spicetify
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+. "$HOME/.cargo/env"
