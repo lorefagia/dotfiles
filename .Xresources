@@ -1,0 +1,65 @@
+Xcursor.theme: Qogir-dark
+Xcursor.size: 16
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: true
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcdfilter
+
+XTerm*renderFont: true
+XTerm*utf8: 2
+XTerm*locale: true
+
+XTerm.vt100.translations: #override \n\
+  Ctrl <Key> j: smaller-vt-font() \n\
+  Ctrl <Key> k: larger-vt-font()
+
+! Every shell is a login shell by default (for inclusion of all necessary environment variables)
+XTerm*loginshell: true
+
+! I like a LOT of scrollback...
+XTerm*savelines: 16384
+
+! double-click to select whole URLs :D
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+! FOR ALL OTHER PROGRAMS USE XRESOURCES
+! This includes xterm and urxvt
+*.foreground:   #FCFCFA
+*.background:   #2D2A2E
+*.cursorColor:  #ffffff
+
+! black
+*.color0:       #403E41
+*.color8:       #727072
+
+! red
+*.color1:       #FF6188
+*.color9:       #FF6188
+
+! green
+*.color2:       #A9DC76
+*.color10:      #A9DC76
+
+! yellow
+*.color3:       #FFD866
+*.color11:      #FFD866
+
+! blue
+*.color4:       #FC9867
+*.color12:      #FC9867
+
+! magenta
+*.color5:       #AB9DF2
+*.color13:      #AB9DF2
+
+! cyan
+*.color6:       #78DCE8
+*.color14:      #78DCE8
+
+! white
+*.color7:       #FCFCFA
+*.color15:      #FCFCFA
