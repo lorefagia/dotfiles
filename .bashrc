@@ -215,6 +215,9 @@ alias hw="hwinfo --short"
 # Fastfetch
 alias ff="fastfetch"
 
+# Merge Xresources
+alias merge="xrdb -merge ~/.Xresources"
+
 # Cpu
 alias cpu="cpuid -i | grep uarch | head -n 1"
 
