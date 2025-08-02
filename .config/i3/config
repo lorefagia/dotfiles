@@ -74,6 +74,7 @@ mode "resize" {
         bindsym Right resize grow width 10 px or 10 ppt
 
 	# back to normal: Enter or Escape
+	bindsym $mod+r mode "default"
 	bindsym Return mode "default"
         bindsym Escape mode "default"
 }
@@ -358,24 +359,38 @@ for_window [floating] resize set 640 480, move position center
 ######################################
 # color settings for windows #
 ######################################
+# Color palette used for the terminal ( ~/.Xresources file )
+# Colors are gathered based on the documentation:
+# https://i3wm.org/docs/userguide.html#xresources
+# Change the variable name at the place you want to match the color
+# of your terminal like this:
+# [example]
+# If you want your bar to have the same background color as your 
+# terminal background change the line 362 from:
+# background #14191D
+# to:
+# background $term_background
+# Same logic applied to everything else.
+set_from_resource $term_background background
+set_from_resource $term_foreground foreground
+set_from_resource $term_color0     color0
+set_from_resource $term_color1     color1
+set_from_resource $term_color2     color2
+set_from_resource $term_color3     color3
+set_from_resource $term_color4     color4
+set_from_resource $term_color5     color5
+set_from_resource $term_color6     color6
+set_from_resource $term_color7     color7
+set_from_resource $term_color8     color8
+set_from_resource $term_color9     color9
+set_from_resource $term_color10    color10
+set_from_resource $term_color11    color11
+set_from_resource $term_color12    color12
+set_from_resource $term_color13    color13
+set_from_resource $term_color14    color14
+set_from_resource $term_color15    color15
 
-# Define colors variables:
-# [Monokai Pro Machine]
-
-set $color0     #273136
-set $color1     #FF6D7E
-set $color2	    #A2E57B
-set $color3     #FFED72
-set $color4     #FFB270
-set $color5     #BAA0F8
-set $color6     #7CD5F1
-set $color7     #F2FFFC
-set $color8     #ADB1B4
-set $background #273136
-set $foreground #F2FFFC
-set $cursor     #F2FFFC
-
-# class			border      background  text	    indicator   child_border
+# class                 border      background  text	    indicator   child_border
 client.focused        	$color0     $color0     $color7     $color0     $color0
 client.unfocused      	$color0     $color0     $color8     $color0     $color0
 client.focused_inactive $color0     $color0     $color8     $color0     $color0
